@@ -1,0 +1,21 @@
+{
+  "name": "realmojiapi",
+  "version": "0.0.0",
+  "description": "Service",
+  "author": "aarmusk <aarmusk@gmail.com>",
+  "main": "functions/main/index.js",
+  "dependencies": {
+    "gemoji": "^4.1.0"
+  },
+  "private": true,
+  "stdlib": {
+    "name": "aarmusk/realmojiapi",
+    "defaultFunction": "main",
+    "timeout": 10000,
+    "publish": true,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
+  }
+}
