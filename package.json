@@ -5,7 +5,8 @@
   "author": "aarmusk <aarmusk@gmail.com>",
   "main": "functions/main/index.js",
   "dependencies": {
-    "gemoji": "^4.1.0"
+    "gemoji": "^4.1.0",
+    "imoji-node": "^0.1.23"
   },
   "private": true,
   "stdlib": {
