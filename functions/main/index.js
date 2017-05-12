@@ -1,19 +1,3 @@
-/* Import dependencies, declare constants */
-
-/**
-* Your function call
-* @param {Object} params Execution parameters
-*   Members
-*   - {Array} args Arguments passed to function
-*   - {Object} kwargs Keyword arguments (key-value pairs) passed to function
-*   - {String} remoteAddress The IPv4 or IPv6 address of the caller
-*
-* @param {Function} callback Execute this to end the function call
-*   Arguments
-*   - {Error} error The error to show if function fails
-*   - {Any} returnValue JSON serializable (or Buffer) return value
-*/
-
 var gemoji = require('gemoji');
 var imojiClient = new (require("imoji-node"))({
         apiKey: process.env.imoji_key,
@@ -43,8 +27,7 @@ var getSticker = function(input, cb) {
 }
 
 module.exports = (params, callback) => {
-	console.log("key :"+process.env.imoji_key);
-	var query = params.kwargs.query || "hello world";
+	var query = params.kwargs.query || "hello";
 	var result = gemoji.unicode[query] || gemoji.name[query]; 
 	var response = {};
 	
@@ -52,5 +35,4 @@ module.exports = (params, callback) => {
     	getSticker(result.name, callback);
     else
     	getSticker(query, callback);
-
 };
